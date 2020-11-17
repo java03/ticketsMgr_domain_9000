@@ -8,7 +8,7 @@
 		<version>2.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.yueqian.ticketsMgrSysMgr</groupId>
+	<groupId>com.yueqian.ticketsMgrSysMgrDomain</groupId>
 	<artifactId>ticketsMgrSysMgr</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
