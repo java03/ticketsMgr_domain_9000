@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class CarVO {
-	private int vehicleId;
+	private Integer vehicleId;
 	private String vehicleNum;
 	private Date buyDate;
 	private String brand;
@@ -20,7 +20,7 @@ public class CarVO {
 	
 	
 	
-	public CarVO(int vehicleId, String vehicleNum, Date buyDate, String brand, String model, int maxCarry,
+	public CarVO(Integer vehicleId, String vehicleNum, Date buyDate, String brand, String model, int maxCarry,
 			BigDecimal displacement, String engineNumber, int delMark) {
 		super();
 		this.vehicleId = vehicleId;
@@ -36,10 +36,10 @@ public class CarVO {
 
 
 
-	public int getVehicleId() {
+	public Integer getVehicleId() {
 		return vehicleId;
 	}
-	public void setVehicleId(int vehicleId) {
+	public void setVehicleId(Integer vehicleId) {
 		this.vehicleId = vehicleId;
 	}
 	public String getVehicleNum() {
