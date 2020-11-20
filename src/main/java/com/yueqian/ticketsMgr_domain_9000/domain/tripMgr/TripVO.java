@@ -2,11 +2,15 @@ package com.yueqian.ticketsMgr_domain_9000.domain.tripMgr;
 
 import java.util.Date;
 
+import com.yueqian.ticketsMgr_domain_9000.domain.empMgr.EmpVO;
+import com.yueqian.ticketsMgr_domain_9000.domain.sysMgr.CarVO;
+import com.yueqian.ticketsMgr_domain_9000.domain.wayMgr.RouteInfo;
+
 public class TripVO {
 	private String tripId;
-	private String routeId;
-	private String vehicleId;
-	private String empId;
+	private RouteInfo route;
+	private CarVO car;
+	private EmpVO emp;
 	private Date leaveTime;
 	private Date returnTime;
 	
@@ -14,12 +18,9 @@ public class TripVO {
 		super();
 	}
 
-	public TripVO(String tripId, String routeId, String vehicleId, String empId, Date leaveTime, Date returnTime) {
+	public TripVO(String tripId, Date leaveTime, Date returnTime) {
 		super();
 		this.tripId = tripId;
-		this.routeId = routeId;
-		this.vehicleId = vehicleId;
-		this.empId = empId;
 		this.leaveTime = leaveTime;
 		this.returnTime = returnTime;
 	}
@@ -32,28 +33,29 @@ public class TripVO {
 		this.tripId = tripId;
 	}
 
-	public String getRouteId() {
-		return routeId;
+
+	public RouteInfo getRoute() {
+		return route;
 	}
 
-	public void setRouteId(String routeId) {
-		this.routeId = routeId;
+	public void setRoute(RouteInfo route) {
+		this.route = route;
 	}
 
-	public String getVehicleId() {
-		return vehicleId;
+	public CarVO getCar() {
+		return car;
 	}
 
-	public void setVehicleId(String vehicleId) {
-		this.vehicleId = vehicleId;
+	public void setCar(CarVO car) {
+		this.car = car;
 	}
 
-	public String getEmpId() {
-		return empId;
+	public EmpVO getEmp() {
+		return emp;
 	}
 
-	public void setEmpId(String empId) {
-		this.empId = empId;
+	public void setEmp(EmpVO emp) {
+		this.emp = emp;
 	}
 
 	public Date getLeaveTime() {
@@ -74,7 +76,11 @@ public class TripVO {
 
 	@Override
 	public String toString() {
-		return "TripVO [tripId=" + tripId + ", routeId=" + routeId + ", vehicleId=" + vehicleId + ", empId=" + empId
-				+ ", leaveTime=" + leaveTime + ", returnTime=" + returnTime + "]";
+		return "TripVO [tripId=" + tripId + ", route=" + route + ", car=" + car + ", emp=" + emp + ", leaveTime="
+				+ leaveTime + ", returnTime=" + returnTime + "]";
 	}
+
+
+	
+	
 }
